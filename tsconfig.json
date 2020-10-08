@@ -1,13 +1,11 @@
 {
     "compilerOptions": {
         "module":"CommonJS",
-        "rootDir": "src",
+        "rootDir": "app",
         "lib": ["DOM"],
         "target": "ES6",
-        "outDir": "built"
     },
     "exclude": [
         "node_modules"
     ],
-    "include": ["src/*"]
 }
