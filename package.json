@@ -4,6 +4,6 @@
     "snowpack": "^2.13.3"
   },
   "scripts": {
-    "build": "snowpack build"
+    "build": "npx snowpack build"
   }
 }
