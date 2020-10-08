@@ -4,6 +4,6 @@
     "snowpack": "^2.13.3"
   },
   "scripts": {
-    "build": "npx snowpack build"
+    "azure:build": "npx snowpack build"
   }
 }
