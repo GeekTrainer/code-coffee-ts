@@ -1,4 +1,4 @@
-import { Dog } from '../shared/interfaces';
+import { Dog } from '../shared/interfaces.d';
 
 const dogs = new Array<Dog>();
 
