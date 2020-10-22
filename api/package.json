@@ -9,9 +9,12 @@
     "start": "func start",
     "test": "echo \"No tests yet...\""
   },
-  "dependencies": {},
+  "dependencies": {
+    "mongoose": "^5.10.9"
+  },
   "devDependencies": {
     "@azure/functions": "^1.0.2-beta2",
+    "@types/mongoose": "^5.7.36",
     "typescript": "^3.3.3"
   }
 }
