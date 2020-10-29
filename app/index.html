@@ -21,6 +21,55 @@
         </div>
         <section class="list-group" id="dogs-list">
         </section>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#register-modal">
+            Register Dog
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="register-modal-title"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Register Dog</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <form>
+                                <div class="form-group">
+                                    <label for="dog-name">Name:</label>
+                                    <input type="text" autocomplete="off" minlength="3" maxlength="16" class="form-control" id="dog-name" aria-describedby="name-help">
+                                    <small id="name-help" class="form-text text-muted">The name of the dog.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="dog-age">Age:</label>
+                                    <input type="number" autocomplete="off" min="0" max="16" class="form-control" id="dog-age" aria-describedby="age-help">
+                                    <small id="age-help" class="form-text text-muted">The name of the dog.</small>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" id="dog-register" data-dismiss="modal">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $('#exampleModal').on('show.bs.modal', event => {
+                var button = $(event.relatedTarget);
+                var modal = $(this);
+                // Use above variables to manipulate the DOM
+
+            });
+        </script>
     </article>
 
     <!-- Optional JavaScript -->
