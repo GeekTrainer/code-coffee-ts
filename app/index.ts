@@ -37,7 +37,13 @@ function displayDog(dog: Dog) {
     document.getElementById('dogs-list').appendChild(dogUI);
 }
 
-document.getElementById('dog-register').addEventListener('click', async () => {
+document.getElementById('dog-form').addEventListener('submit', async (e) => {
+    e.preventDefault(); // don't submit
+
+    // get the control/element
+    const form = e.target as HTMLFormElement;
+
+    if (!form.checkValidity()) return; // if not valid, stop
     // load data from form
     const clientDog = {
         name: (document.getElementById('dog-name') as HTMLInputElement).value,

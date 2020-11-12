@@ -38,38 +38,33 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body">
-                        <div class="container-fluid">
-                            <form>
+                    <form id="dog-form">
+                        <div class="modal-body">
+                            <div class="container-fluid">
                                 <div class="form-group">
                                     <label for="dog-name">Name:</label>
-                                    <input type="text" autocomplete="off" minlength="3" maxlength="16" class="form-control" id="dog-name" aria-describedby="name-help">
+                                    <input type="text" autocomplete="off" minlength="3" maxlength="16" required
+                                        class="form-control" id="dog-name" aria-describedby="name-help">
                                     <small id="name-help" class="form-text text-muted">The name of the dog.</small>
                                 </div>
                                 <div class="form-group">
                                     <label for="dog-age">Age:</label>
-                                    <input type="number" autocomplete="off" min="0" max="16" class="form-control" id="dog-age" aria-describedby="age-help">
+                                    <input type="number" autocomplete="off" min="0" max="16" required class="form-control"
+                                        id="dog-age" aria-describedby="age-help">
                                     <small id="age-help" class="form-text text-muted">The name of the dog.</small>
                                 </div>
-                            </form>
+                            </div>
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary" id="dog-register" data-dismiss="modal">Register</button>
-                    </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary" id="dog-register">Register</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
 
-        <script>
-            $('#exampleModal').on('show.bs.modal', event => {
-                var button = $(event.relatedTarget);
-                var modal = $(this);
-                // Use above variables to manipulate the DOM
 
-            });
-        </script>
     </article>
 
     <!-- Optional JavaScript -->
@@ -83,7 +78,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    <script src="index.js" type="module"></script>
 </body>
 
 </html>
