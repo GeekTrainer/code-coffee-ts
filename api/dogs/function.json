@@ -7,8 +7,10 @@
       "name": "req",
       "methods": [
         "get",
-        "post"
-      ]
+        "post",
+        "put"
+      ],
+      "route": "dogs/{name:alpha?}"
     },
     {
       "type": "http",
