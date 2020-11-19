@@ -42,10 +42,10 @@ function displayDog(dog: Dog) {
         (document.getElementById('dog-description') as HTMLInputElement).value = serverDog.description;
     });
 
-    document.getElementById('dogs-list').appendChild(dogUI);
+    document.getElementById('dogs-list')!.appendChild(dogUI);
 }
 
-document.getElementById('dog-form').addEventListener('submit', async (e) => {
+document.getElementById('dog-form')!.addEventListener('submit', async (e) => {
     e.preventDefault(); // don't submit
     // get the control/element
     const form = e.target as HTMLFormElement;

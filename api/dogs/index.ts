@@ -7,7 +7,13 @@ mongoose.connect(process.env.MONGOOSE_CONNECTION_STRING, {
     useUnifiedTopology: true
 });
 
-import { Dog } from '../../shared/interfaces.d';
+// import { Dog } from '../../shared/interfaces.d';
+
+interface Dog {
+    name: string,
+    age: number,
+    description: string,
+}
 
 // MongoDB schema
 const dogSchema = new mongoose.Schema({
@@ -100,7 +106,7 @@ async function createDog(context: Context) {
 
 async function updateDog(context: Context) {
     const dog = context.req.body as Dog;
-    await DogModel.update({name: dog.name}, dog);
+    await DogModel.update({name: context.bindingData.name}, dog);
     context.res = {
         status: 203
     }

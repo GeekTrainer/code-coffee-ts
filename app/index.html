@@ -13,64 +13,10 @@
 </head>
 
 <body>
-
     <article class="container">
-        <div class="jumbotron">
-            <h1 class="display-3">Love dogs</h1>
-            <p class="lead">Connecting dog lovers with other dog lovers</p>
-        </div>
-        <section class="list-group" id="dogs-list">
-        </section>
-
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#register-modal">
-            Register Dog
-        </button>
-
-        <!-- Modal -->
-        <div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="register-modal-title"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Register Dog</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <form id="dog-form">
-                        <div class="modal-body">
-                            <div class="container-fluid">
-                                <div class="form-group">
-                                    <label for="dog-name">Name:</label>
-                                    <input type="text" autocomplete="off" minlength="3" maxlength="16" required
-                                        class="form-control" id="dog-name" aria-describedby="name-help">
-                                    <small id="name-help" class="form-text text-muted">The name of the dog.</small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="dog-age">Age:</label>
-                                    <input type="number" autocomplete="off" min="0" max="16" required
-                                        class="form-control" id="dog-age" aria-describedby="age-help">
-                                    <small id="age-help" class="form-text text-muted">The name of the dog.</small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="dog-description">Description:</label>
-                                    <textarea class="form-control" name="dog-description" id="dog-description"
-                                        cols="30" rows="10"></textarea>
-                                    <small id="description-help" class="form-text text-muted">Describe the dog in a couple of sentences.</small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-primary" id="dog-register">Register</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-
+        <h1>Love dogs</h1>
+        <!-- host our Vue.js application -->
+        <div id="app"></div>
     </article>
 
     <!-- Optional JavaScript -->
@@ -84,7 +30,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="index.js" type="module"></script>
+    <script type="module" src="index-vue.js"></script>
 </body>
 
 </html>
