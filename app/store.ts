@@ -14,5 +14,10 @@ export default {
                 'Content-Type': 'application/json'
             }
         });
+    },
+    get: async(name: string): Promise<Dog> => {
+        const response = await fetch(`/api/dogs/${name}`);
+        const json = await response.json();
+        return json as Dog;
     }
 }
